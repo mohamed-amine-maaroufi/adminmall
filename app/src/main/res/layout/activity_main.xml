@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <Button
+        android:id="@+id/btn_clients"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Manage clients"
+        android:textColor="#FFF"
+        android:background="@drawable/round_btn"/>
+
+    <Button
+        android:id="@+id/btn_products"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Manage products"
+        android:textColor="#FFF"
+        android:background="@drawable/round_btn"/>
+
+</LinearLayout>
