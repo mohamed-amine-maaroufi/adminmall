@@ -1,4 +1,4 @@
-package com.example.adminmall.beans;
+package com.example.adminmall.manageproduct;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import com.example.adminmall.R;
+import com.example.adminmall.beans.Product;
+
 import java.util.List;
 
 

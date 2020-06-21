@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ProductsListActivity">
+    tools:context=".manageproduct.ProductsListActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="5dp"
+        android:layout_marginTop="4dp"
         android:textSize="30sp"
         android:textColor="#f4557f"
         android:text="Products"/>
@@ -19,7 +19,8 @@
     <ListView
         android:id="@+id/listViewproducts"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"/>
 
 
 </LinearLayout>

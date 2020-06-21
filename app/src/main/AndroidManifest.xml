@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.adminmall">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity"
+        <activity android:name=".manageproduct.ProductDetails"></activity>
+        <activity
+            android:name=".LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,8 +20,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".ProductsListActivity" />
-        <activity android:name=".clientsList"></activity>
+        <activity android:name=".manageproduct.ProductsListActivity" />
+        <activity android:name=".clientsList" />
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

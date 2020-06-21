@@ -29,7 +29,7 @@ android:fitsSystemWindows="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Email"
-            android:layout_weight="0.8"
+            android:layout_weight="0.75"
             android:textColor="#FFFF"/>
 
         <!-- Email Label -->
@@ -40,9 +40,10 @@ android:fitsSystemWindows="true"
             android:layout_marginBottom="8dp"
             android:id="@+id/email"
             android:textColor="#FFF"
-            android:layout_weight="0.2"
+            android:layout_weight="0.25"
             android:inputType="textEmailAddress"
-            android:hint="Email" />
+            android:hint="Email"
+            android:textColorHint="#FDE7E7"/>
         </LinearLayout>
 
     <LinearLayout
@@ -54,7 +55,7 @@ android:fitsSystemWindows="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Password"
-            android:layout_weight="0.8"
+            android:layout_weight="0.75"
             android:textColor="#FFFF"/>
         <!-- Password Label -->
         <EditText
@@ -62,11 +63,12 @@ android:fitsSystemWindows="true"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:layout_weight="0.2"
+            android:layout_weight="0.25"
             android:textColor="#FFF"
             android:id="@+id/password"
             android:inputType="textPassword"
-            android:hint="Password"/>
+            android:hint="Password"
+            android:textColorHint="#FDE7E7"/>
     </LinearLayout>
 
 

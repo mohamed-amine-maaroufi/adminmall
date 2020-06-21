@@ -1,4 +1,4 @@
-package com.example.adminmall;
+package com.example.adminmall.manageproduct;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,8 +12,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.adminmall.R;
 import com.example.adminmall.beans.Product;
-import com.example.adminmall.beans.ProductList;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -63,6 +63,8 @@ public class ProductsListActivity extends AppCompatActivity {
 
                                 product.setProduct_title((String) document.get("product_title"));
                                 product.setProduct_price((String) document.get("product_price"));
+
+                                Toast.makeText(ProductsListActivity.this, product.getProduct_title() + "\n price = " + product.getProduct_price() , Toast.LENGTH_LONG).show();
 
                                /* product.setStar_1((int) document.get("star_1"));
                                 product.setStar_2((int) document.get("star_2"));
@@ -142,15 +144,14 @@ public class ProductsListActivity extends AppCompatActivity {
                 Product product = products.get(i);
 
                 Toast.makeText(ProductsListActivity.this, "Product : " + product.getProduct_title()
-                        + "\n" + "Price : " + product.getCutted_price(), Toast.LENGTH_SHORT).show();
+                        + "\n" + "Price : " + product.getProduct_price(), Toast.LENGTH_SHORT).show();
+
                 //creating an intent
-                //Intent intent = new Intent(getApplicationContext(), ArtistActivity.class);
-
-                //putting artist name and id to intent
-                //intent.putExtra(ARTIST_ID, artist.getArtistId());
-
+                Intent intent = new Intent(ProductsListActivity.this, ProductDetails.class);
+                //putting product to intent
+                intent.putExtra("product", product);
                 //starting the activity with intent
-                //startActivity(intent);
+                startActivity(intent);
             }
         });
 

@@ -1,6 +1,8 @@
 package com.example.adminmall.beans;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable {
     private String id;
     private int star_1, star_2,star_3, star_4, star_5;
     private boolean cod;
