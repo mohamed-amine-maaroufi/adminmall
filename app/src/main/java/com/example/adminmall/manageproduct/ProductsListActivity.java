@@ -55,68 +55,106 @@ public class ProductsListActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                Log.d("ActivityProducts", document.getId() + " => " + document.getData());
+                            try {
+                                for (QueryDocumentSnapshot document : task.getResult()) {
+                                    Log.d("ActivityProducts", document.getId() + " => " + document.getData());
 
-                                //getting product
-                                Product product = new Product();
+                                    //getting product
+                                    Product product = new Product();
 
-                                product.setProduct_title((String) document.get("product_title"));
-                                product.setProduct_price((String) document.get("product_price"));
 
-                                Toast.makeText(ProductsListActivity.this, product.getProduct_title() + "\n price = " + product.getProduct_price() , Toast.LENGTH_LONG).show();
+                                    product.setProduct_title(String.valueOf(  document.get("product_title")));
+                                    product.setProduct_price(String.valueOf(document.get("product_price")));
+                                    if(document.get("star_1") != null)
+                                        product.setStar_1(String.valueOf( document.get("star_1")));
 
-                               /* product.setStar_1((int) document.get("star_1"));
-                                product.setStar_2((int) document.get("star_2"));
-                                product.setStar_3((int) document.get("star_3"));
-                                product.setStar_4((int) document.get("star_4"));
-                                product.setStar_5((int) document.get("star_5"));
-                                product.setCod((boolean) document.get("cod"));
-                                product.setAverage_rating((double) document.get("average_rating"));
-                                product.setCutted_price((String) document.get("cutted_price"));
-                                product.setFree_coupen_body((String) document.get("free_coupen_body"));
-                                product.setGetFree_coupen_title((String) document.get("free_coupen_title"));
-                                product.setFree_coupens((int) document.get("free_coupens"));
-                                product.setProduct_description((String) document.get("product_description"));
-                                product.setProduct_image_1((String) document.get("product_image_1"));
-                                product.setProduct_image_2((String) document.get("product_image_2"));
-                                product.setProduct_image_3((String) document.get("product_image_3"));
-                                product.setProduct_other_details((String) document.get("product_other_details"));
-                                product.setProduct_price((String) document.get("product_price"));
-                                product.setProduct_title((String) document.get("product_title"));
-                                product.setSpec_title_1((String) document.get("spec_title_1"));
-                                product.setSpec_title_1_field_1_name((String) document.get("spec_title_1_field_1_name"));
-                                product.setSpec_title_1_field_1_value((String) document.get("spec_title_1_field_1_value"));
-                                product.setSpec_title_1_field_2_name((String) document.get("spec_title_1_field_2_name"));
-                                product.setSpec_title_1_field_2_value((String) document.get("spec_title_1_field_2_value"));
-                                product.setSpec_title_1_totals_fields((int) document.get("spec_title_1_totals_fields"));
-                                product.setSpec_title_2((String) document.get("spec_title_2"));
-                                product.setSpec_title_2_field_1_name((String) document.get("spec_title_2_field_1_name"));
-                                product.setSpec_title_2_field_1_value((String) document.get("spec_title_2_field_1_value"));
-                                product.setSpec_title_2_field_2_name((String) document.get("spec_title_2_field_2_name"));
-                                product.setSpec_title_2_field_2_value((String) document.get("spec_title_2_field_2_value"));
-                                product.setSpec_title_2_totals_fields((int) document.get("spec_title_2_totals_fields"));
-                                product.setSpec_title_3((String) document.get("spec_title_3"));
-                                product.setSpec_title_3_field_1_name((String) document.get("spec_title_3_field_1_name"));
-                                product.setSpec_title_3_field_1_value((String) document.get("spec_title_3_field_1_value"));
-                                product.setSpec_title_3_field_2_name((String) document.get("spec_title_3_field_2_name"));
-                                product.setSpec_title_3_field_2_value((String) document.get("spec_title_3_field_2_value"));
-                                product.setSpec_title_3_totals_fields((int) document.get("spec_title_3_totals_fields"));
-                                product.setSpec_title_4((String) document.get("spec_title_4"));
-                                product.setSpec_title_4_field_1_name((String) document.get("spec_title_4_field_1_name"));
-                                product.setSpec_title_4_field_1_value((String) document.get("spec_title_4_field_1_value"));
-                                product.setSpec_title_4_field_2_name((String) document.get("spec_title_4_field_2_name"));
-                                product.setSpec_title_4_field_2_value((String) document.get("spec_title_4_field_2_value"));
-                                product.setSpec_title_4_field_3_name((String) document.get("spec_title_4_field_3_name"));
-                                product.setSpec_title_4_field_3_value((String) document.get("spec_title_4_field_3_value"));
-                                product.setSpec_title_4_totals_fields((int) document.get("spec_title_3_totals_fields"));
-                                product.setTotal_rating((int) document.get("total_rating"));
-                                product.setTotal_spec_titles((int) document.get("otal_spec_titles"));*/
+                                    if(document.get("star_2") != null)
+                                        product.setStar_2(String.valueOf( document.get("star_2")));
 
-                                //adding product to the list
-                                products.add(product);
+                                    if(document.get("star_3") != null)
+                                        product.setStar_3(String.valueOf( document.get("star_3")));
+
+                                    if(document.get("star_4") != null)
+                                        product.setStar_4(String.valueOf( document.get("star_4")));
+
+                                    if(document.get("star_5") != null)
+                                        product.setStar_5(String.valueOf( document.get("star_5")));
+
+                                    if(document.get("cod") != null)
+                                        product.setCod(String.valueOf( document.get("cod")));
+
+                                    if(document.get("average_rating") != null)
+                                        product.setAverage_rating(String.valueOf( document.get("average_rating")));
+
+
+                                    product.setCutted_price(String.valueOf( document.get("cutted_price")));
+                                    product.setFree_coupen_body(String.valueOf(document.get("free_coupen_body")));
+                                    product.setFree_coupen_title(String.valueOf( document.get("free_coupen_title")));
+
+                                    if(document.get("free_coupens") != null)
+                                        product.setFree_coupens(String.valueOf(document.get("free_coupens")));
+
+                                    product.setProduct_description(String.valueOf(  document.get("product_description")));
+                                    product.setProduct_image_1(String.valueOf(  document.get("product_image_1")));
+                                    product.setProduct_image_2(String.valueOf(  document.get("product_image_2")));
+                                    product.setProduct_image_3(String.valueOf(  document.get("product_image_3")));
+                                    product.setProduct_other_details(String.valueOf(  document.get("product_other_details")));
+                                    product.setProduct_price(String.valueOf(  document.get("product_price")));
+                                    product.setProduct_title(String.valueOf(  document.get("product_title")));
+                                    product.setSpec_title_1(String.valueOf(  document.get("spec_title_1")));
+                                    product.setSpec_title_1_field_1_name(String.valueOf(  document.get("spec_title_1_field_1_name")));
+                                    product.setSpec_title_1_field_1_value(String.valueOf(  document.get("spec_title_1_field_1_value")));
+                                    product.setSpec_title_1_field_2_name(String.valueOf(  document.get("spec_title_1_field_2_name")));
+                                    product.setSpec_title_1_field_2_value(String.valueOf(  document.get("spec_title_1_field_2_value")));
+
+                                    if(document.get("spec_title_1_totals_fields") != null)
+                                        product.setSpec_title_1_totals_fields(String.valueOf(  document.get("spec_title_1_totals_fields")));
+
+                                    product.setSpec_title_2(String.valueOf(  document.get("spec_title_2")));
+                                    product.setSpec_title_2_field_1_name(String.valueOf(  document.get("spec_title_2_field_1_name")));
+                                    product.setSpec_title_2_field_1_value(String.valueOf(  document.get("spec_title_2_field_1_value")));
+                                    product.setSpec_title_2_field_2_name(String.valueOf(  document.get("spec_title_2_field_2_name")));
+                                    product.setSpec_title_2_field_2_value(String.valueOf(  document.get("spec_title_2_field_2_value")));
+
+                                    if(document.get("spec_title_2_totals_fields") != null)
+                                        product.setSpec_title_2_totals_fields(String.valueOf(  document.get("spec_title_2_totals_fields")));
+
+                                    product.setSpec_title_3(String.valueOf(  document.get("spec_title_3")));
+                                    product.setSpec_title_3_field_1_name(String.valueOf(  document.get("spec_title_3_field_1_name")));
+                                    product.setSpec_title_3_field_1_value(String.valueOf(  document.get("spec_title_3_field_1_value")));
+                                    product.setSpec_title_3_field_2_name(String.valueOf(  document.get("spec_title_3_field_2_name")));
+                                    product.setSpec_title_3_field_2_value(String.valueOf(  document.get("spec_title_3_field_2_value")));
+
+                                    if(document.get("spec_title_3_totals_fields") != null)
+                                        product.setSpec_title_3_totals_fields(String.valueOf(  document.get("spec_title_3_totals_fields")));
+
+                                    product.setSpec_title_4(String.valueOf(  document.get("spec_title_4")));
+                                    product.setSpec_title_4_field_1_name(String.valueOf(  document.get("spec_title_4_field_1_name")));
+                                    product.setSpec_title_4_field_1_value(String.valueOf(  document.get("spec_title_4_field_1_value")));
+                                    product.setSpec_title_4_field_2_name(String.valueOf(  document.get("spec_title_4_field_2_name")));
+                                    product.setSpec_title_4_field_2_value(String.valueOf(  document.get("spec_title_4_field_2_value")));
+                                    product.setSpec_title_4_field_3_name(String.valueOf(  document.get("spec_title_4_field_3_name")));
+                                    product.setSpec_title_4_field_3_value(String.valueOf(  document.get("spec_title_4_field_3_value")));
+
+                                    if(document.get("spec_title_4_totals_fields") != null)
+                                        product.setSpec_title_4_totals_fields(String.valueOf(  document.get("spec_title_4_totals_fields")));
+
+                                    if(document.get("total_rating") != null)
+                                        product.setTotal_rating(String.valueOf(  document.get("total_rating")));
+
+                                    if(document.get("total_spec_titles") != null)
+                                        product.setTotal_spec_titles(String.valueOf(  document.get("total_spec_titles")));
+
+
+                                    //adding product to the list
+                                    products.add(product);
+                                }
+
+
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                                Toast.makeText(ProductsListActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                             }
-
 
                                 //creating adapter
                                 ProductList productAdapter = new ProductList(ProductsListActivity.this, products);
