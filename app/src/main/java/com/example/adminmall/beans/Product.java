@@ -10,12 +10,14 @@ public class Product implements Serializable {
     private String star_4;
     private String star_5;
     private String cod;
+    private String in_stock;
     private String average_rating;
     private String cutted_price;
     private String free_coupen_body;
     private String free_coupen_title;
     private String free_coupens;
     private String product_description;
+    private String no_of_product_images;
     private String product_image_1;
     private String product_image_2;
     private String product_image_3;
@@ -59,6 +61,7 @@ public class Product implements Serializable {
             String star_4,
             String star_5,
             String cod,
+            String in_stock,
             String average_rating,
             String cutted_price,
             String free_coupen_body,
@@ -66,6 +69,7 @@ public class Product implements Serializable {
             String free_coupens,
             String product_description,
             String product_image_1,
+            String no_of_product_images,
             String product_image_2,
             String product_image_3,
             String product_other_details,
@@ -105,6 +109,7 @@ public class Product implements Serializable {
 		this.star_3 = star_3;
 		this.star_4 = star_4;
 		this.star_5 = star_5;
+		this.in_stock = in_stock;
 		this.cod = cod;
 		this.average_rating = average_rating;
 		this.cutted_price = cutted_price;
@@ -112,6 +117,7 @@ public class Product implements Serializable {
 		this.free_coupen_title = free_coupen_title;
 		this.free_coupens = free_coupens;
 		this.product_description = product_description;
+		this.no_of_product_images = no_of_product_images;
 		this.product_image_1 = product_image_1;
 		this.product_image_2 = product_image_2;
 		this.product_image_3 = product_image_3;
@@ -148,11 +154,27 @@ public class Product implements Serializable {
 		this.total_spec_titles = total_spec_titles;
 
     }
-    //default parameters
+
+    //default constructor
     public Product(){
 
     }
 
+    public String getNo_of_product_images() {
+        return no_of_product_images;
+    }
+
+    public void setNo_of_product_images(String no_of_product_images) {
+        this.no_of_product_images = no_of_product_images;
+    }
+
+    public String getIn_stock() {
+        return in_stock;
+    }
+
+    public void setIn_stock(String in_stock) {
+        this.in_stock = in_stock;
+    }
 
     public String getId() {
         return id;

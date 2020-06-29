@@ -7,14 +7,36 @@
     android:orientation="vertical"
     tools:context=".manageproduct.ProductsListActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="4dp"
-        android:textSize="30sp"
-        android:textColor="#f4557f"
-        android:text="Products"/>
+        android:layout_margin="4dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.2"
+            android:textSize="30sp"
+            android:textColor="#f4557f"
+            android:text="Products"/>
+
+        <Button
+            android:id="@+id/bSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:text="Add"
+            android:textColor="#fff"
+            android:background="#f4557f"
+            android:drawableRight="@drawable/ic_add"/>
+    </LinearLayout>
+
+
+
+
+
 
     <ListView
         android:id="@+id/listViewproducts"

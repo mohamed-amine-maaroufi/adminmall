@@ -81,7 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
-                android:text="star 1"
+                android:text="1 star"
                 android:layout_marginTop="4dp"/>
             <EditText
                 android:layout_width="match_parent"
@@ -97,7 +97,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
-                android:text="star 2"
+                android:text="2 star"
                 android:layout_marginTop="4dp"/>
             <EditText
                 android:layout_width="match_parent"
@@ -113,7 +113,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
-                android:text="star_3"
+                android:text="3 star"
                 android:layout_marginTop="4dp"/>
             <EditText
                 android:layout_width="match_parent"
@@ -129,7 +129,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
-                android:text="star 4"
+                android:text="4 star"
                 android:layout_marginTop="4dp"/>
             <EditText
                 android:layout_width="match_parent"
@@ -145,7 +145,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
-                android:text="star 5"
+                android:text="5 star"
                 android:layout_marginTop="4dp"/>
             <EditText
                 android:layout_width="match_parent"
@@ -157,20 +157,60 @@
                 android:textColorHint="#DCBCBC"/>
 
             <!-- Product cod -->
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
                 android:text="COD"
                 android:layout_marginTop="4dp"/>
-            <EditText
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioGroupCod">
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#DCBCBC"
+                        android:id="@+id/codradioTrue"
+                        android:text="true"/>
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#DCBCBC"
+                        android:id="@+id/codradioFalse"
+                        android:text="false"/>
+                </RadioGroup>
+
+
+            <!-- in_stock -->
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/cod"
-                android:inputType="text"
-                android:hint="empty"
-                android:textColor="#DCBCBC"
-                android:textColorHint="#DCBCBC"/>
+                android:textColor="#fff"
+                android:text="In stock"
+                android:layout_marginTop="4dp"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroupIn_stock">
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#DCBCBC"
+                    android:id="@+id/in_stockradioTrue"
+                    android:text="true"/>
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#DCBCBC"
+                    android:id="@+id/in_stockradioFalse"
+                    android:text="false"/>
+            </RadioGroup>
 
 
             <!-- Product average_rating -->
@@ -250,6 +290,21 @@
                 android:textColor="#DCBCBC"
                 android:textColorHint="#DCBCBC"/>
 
+
+            <!--  no_of_product_images -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="Number of product images"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/no_of_product_images"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
 
             <!--  product_image_1 -->
             <TextView
@@ -742,7 +797,28 @@
                 android:textColor="#DCBCBC"
                 android:textColorHint="#DCBCBC"/>
 
+            <Button
+                android:id="@+id/update"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_btn_login"
+                android:textColor="#FFF"
+                android:padding="12dp"
+                android:text="Update"/>
 
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:minHeight="50dp"
+                android:visibility="gone"
+                android:minWidth="200dp"
+                android:layout_gravity="center"
+                android:progress="1" />
 
 
 
