@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".manageproduct.ProductDetails">
+    tools:context=".manageproduct.ProductUpdateDetails">
 
     <!-- Product price -->
     <TextView
@@ -16,7 +16,7 @@
         android:layout_marginTop="4dp"
         android:textSize="30sp"
         android:textColor="#f4557f"
-        android:text="Product Details"/>
+        android:text="Add Product"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -165,24 +165,25 @@
                 android:text="COD"
                 android:layout_marginTop="4dp"/>
 
-                <RadioGroup
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroupCod">
+                <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/radioGroupCod">
-                    <RadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="#DCBCBC"
-                        android:id="@+id/codradioTrue"
-                        android:text="true"/>
+                    android:textColor="#DCBCBC"
+                    android:id="@+id/codradioTrue"
+                    android:text="true"/>
 
-                    <RadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="#DCBCBC"
-                        android:id="@+id/codradioFalse"
-                        android:text="false"/>
-                </RadioGroup>
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#DCBCBC"
+                    android:checked="true"
+                    android:id="@+id/codradioFalse"
+                    android:text="false"/>
+            </RadioGroup>
 
 
             <!-- in_stock -->
@@ -208,6 +209,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="#DCBCBC"
+                    android:checked="true"
                     android:id="@+id/in_stockradioFalse"
                     android:text="false"/>
             </RadioGroup>
@@ -303,6 +305,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/no_of_product_images"
                 android:hint="empty"
+                android:inputType="number"
                 android:textColor="#DCBCBC"
                 android:textColorHint="#DCBCBC"/>
 
@@ -798,7 +801,7 @@
                 android:textColorHint="#DCBCBC"/>
 
             <Button
-                android:id="@+id/update"
+                android:id="@+id/btnadd"
                 android:layout_width="200dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="24dp"
@@ -807,7 +810,7 @@
                 android:background="@drawable/round_btn_login"
                 android:textColor="#FFF"
                 android:padding="12dp"
-                android:text="Update"/>
+                android:text="Add"/>
 
             <ProgressBar
                 android:id="@+id/progressBar"

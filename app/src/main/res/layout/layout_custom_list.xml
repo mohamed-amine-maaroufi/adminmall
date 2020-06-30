@@ -1,70 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!-- Layout for a single list item -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/background">
+    android:gravity="center_vertical"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:orientation="horizontal"
+    android:layout_margin="3dp"
+    android:background="#f4557f"
+    android:padding="16dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="0dp"
+        android:text="title"
+        android:textColor="#fff"
+        android:textSize="18dp"
         android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="0.2">
-
-            <TextView
-                android:text="title 1"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                android:id="@+id/textView1"
-                android:textColor="#FFF"
-                android:padding="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:text="Price: "
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                    android:padding="10dp"
-                    android:textColor="#FFF"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="2dp"/>
-
-                <TextView
-                    android:text="title 2"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                    android:id="@+id/textView2"
-                    android:textColor="#FFF"
-                    android:padding="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <Button
-            android:background="@drawable/ic_delete"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:layout_weight="0.8">
-
-        </Button>
+        android:layout_weight="1" />
 
 
-    </LinearLayout>
 
-<LinearLayout
-    android:layout_marginTop="1dp"
-    android:layout_width="match_parent"
-    android:layout_height="1dp"
-    android:background="#A6A6A6"/>
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btndelete"
+        android:background="#f4557f"
+        android:focusable="false"
+        android:drawableRight="@drawable/ic_delete" />
 
 </LinearLayout>

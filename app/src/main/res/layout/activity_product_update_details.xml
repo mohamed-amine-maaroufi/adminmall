@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".manageproduct.ProductUpdateDetails">
+
+    <!-- Product price -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:textSize="30sp"
+        android:textColor="#f4557f"
+        android:text="Update Product"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+
+
+            <!-- Product title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="Product title"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/product_title"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- Product product_description -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="product description"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/product_description"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- Product price -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="Product price"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/product_price"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- Product star_1 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="1 star"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/star_1"
+                android:inputType="number"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- Product star_2 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="2 star"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/star_2"
+                android:hint="empty"
+                android:inputType="number"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- Product star_3 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="3 star"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/star_3"
+                android:inputType="number"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- Product star_4 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="4 star"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/star_4"
+                android:inputType="number"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- Product star_5 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="5 star"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/star_5"
+                android:inputType="number"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- Product cod -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="COD"
+                android:layout_marginTop="4dp"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioGroupCod">
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#DCBCBC"
+                        android:id="@+id/codradioTrue"
+                        android:text="true"/>
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#DCBCBC"
+                        android:id="@+id/codradioFalse"
+                        android:text="false"/>
+                </RadioGroup>
+
+
+            <!-- in_stock -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="In stock"
+                android:layout_marginTop="4dp"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroupIn_stock">
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#DCBCBC"
+                    android:id="@+id/in_stockradioTrue"
+                    android:text="true"/>
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#DCBCBC"
+                    android:id="@+id/in_stockradioFalse"
+                    android:text="false"/>
+            </RadioGroup>
+
+
+            <!-- Product average_rating -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="average rating"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/average_rating"
+                android:inputType="numberDecimal"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- Product cutted_price -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="cutted price"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cutted_price"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- Product free_coupen_body -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="free coupen body"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/free_coupen_body"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- Product free_coupen_title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="free coupen title"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/free_coupen_title"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- Product free_coupens -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="free coupens"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/free_coupens"
+                android:inputType="number"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+
+            <!--  no_of_product_images -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="Number of product images"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/no_of_product_images"
+                android:hint="empty"
+                android:inputType="number"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!--  product_image_1 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="product image 1"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/product_image_1"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- product_image_2 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="product image 2"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/product_image_2"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- product_image_3 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="product_image_3"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/product_image_3"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- product_other_details -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="product other details"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/product_other_details"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- spec_title_1 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="spec title 1"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spec_title_1"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- spec_title_1_field_1_name -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="spec title 1 field 1 name"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spec_title_1_field_1_name"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- spec_title_1_field_1_value -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="spec title 1 field 1 value"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spec_title_1_field_1_value"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- spec_title_1_field_2_name -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="spec title 1 field 2 name"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spec_title_1_field_2_name"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- spec_title_1_field_2_value -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="spec title 1 field 2 value"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spec_title_1_field_2_value"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- spec_title_1_totals_fields -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="spec title 1 totals fields"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spec_title_1_totals_fields"
+                android:inputType="number"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+
+            <!-- spec_title_2 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="spec title 2"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spec_title_2"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- spec_title_2_field_1_name -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="spec title 2 field 1 name"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spec_title_2_field_1_name"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- spec_title_2_field_1_value -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="spec title 2 field 1 value"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spec_title_2_field_1_value"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- spec_title_2_field_2_name -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="spec title 2 field 2 name"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spec_title_2_field_2_name"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- spec_title_2_field_2_value -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="spec title 2 field 2 value"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spec_title_2_field_2_value"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- spec_title_2_totals_fields -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="spec title 2 totals fields"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spec_title_2_totals_fields"
+                android:inputType="number"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+
+            <!-- spec_title_3 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="spec title 3"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spec_title_3"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- spec_title_3_field_1_name -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="spec title 3 field 1 name"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spec_title_3_field_1_name"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- spec_title_3_field_1_value -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="spec title 3 field 1 value"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spec_title_3_field_1_value"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- spec_title_3_field_2_name -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="spec title 3 field 2 name"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spec_title_3_field_2_name"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- spec_title_3_field_2_value -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="spec title 3 field 2 value"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spec_title_3_field_2_value"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- spec_title_3_totals_fields -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="spec title 3 totals fields"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spec_title_3_totals_fields"
+                android:inputType="number"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+
+            <!-- spec_title_4 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="spec title 4"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spec_title_4"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- spec_title_4_field_1_name -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="spec title 4 field 1 name"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spec_title_4_field_1_name"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- spec_title_4_field_1_value -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="spec title 4 field 1 value"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spec_title_4_field_1_value"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- spec_title_4_field_2_name -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="spec title 4 field 2 name"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spec_title_4_field_2_name"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- spec_title_4_field_2_value -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="spec title 4 field 2 value"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spec_title_4_field_2_value"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- spec_title_4_field_3_name -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="spec title 4 field 3 name"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spec_title_4_field_3_name"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- spec_title_4_field_3_value -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="spec title 4 field 3 value"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spec_title_4_field_3_value"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <!-- spec_title_4_totals_fields -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="spec title 4 totals fields"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spec_title_4_totals_fields"
+                android:inputType="number"
+                android:hint="empty"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+
+            <!-- total_spec_titles -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="total spec titles"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/total_spec_titles"
+                android:hint="empty"
+                android:inputType="number"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+
+            <!-- total_rating -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="total rating"
+                android:layout_marginTop="4dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/total_rating"
+                android:hint="empty"
+                android:inputType="number"
+                android:textColor="#DCBCBC"
+                android:textColorHint="#DCBCBC"/>
+
+            <Button
+                android:id="@+id/update"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_btn_login"
+                android:textColor="#FFF"
+                android:padding="12dp"
+                android:text="Update"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:minHeight="50dp"
+                android:visibility="gone"
+                android:minWidth="200dp"
+                android:layout_gravity="center"
+                android:progress="1" />
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
