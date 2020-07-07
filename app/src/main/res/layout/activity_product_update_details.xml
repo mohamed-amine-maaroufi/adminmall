@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context=".manageproduct.ProductUpdateDetails">
 
-    <!-- Product price -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,6 +29,21 @@
             android:padding="10dp"
             android:orientation="vertical">
 
+
+            <!-- categorie -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="Catgorie"
+
+                android:layout_marginTop="4dp"/>
+            <Spinner
+                android:id="@+id/spinnercategorie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:entries="@array/categories_arrays"/>
 
 
             <!-- Product title -->
@@ -73,6 +88,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/product_price"
                 android:hint="empty"
+                android:inputType="number"
                 android:textColor="#DCBCBC"
                 android:textColorHint="#DCBCBC"/>
 

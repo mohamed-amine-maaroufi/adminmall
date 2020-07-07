@@ -66,9 +66,11 @@ public class ProductsListActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
+                            products.clear();
                             try {
                                 for (QueryDocumentSnapshot document : task.getResult()) {
                                     Log.d("ActivityProducts", document.getId() + " => " + document.getData());
+
 
 
                                     //getting product
@@ -78,6 +80,10 @@ public class ProductsListActivity extends AppCompatActivity {
 
                                     product.setProduct_title(String.valueOf(  document.get("product_title")));
                                     product.setProduct_price(String.valueOf(document.get("product_price")));
+
+                                    if(document.get("index_category") != null)
+                                        product.setIndex_category(String.valueOf( document.get("index_category")));
+
                                     if(document.get("1_star") != null)
                                         product.setStar_1(String.valueOf( document.get("1_star")));
 

@@ -24,6 +24,7 @@ public class Product implements Serializable {
     private String product_other_details;
     private String product_price;
     private String product_title;
+    private String index_category;
     private String spec_title_1;
     private String spec_title_1_field_1_name;
     private String spec_title_1_field_1_value;
@@ -158,6 +159,14 @@ public class Product implements Serializable {
     //default constructor
     public Product(){
 
+    }
+
+    public String getIndex_category() {
+        return index_category;
+    }
+
+    public void setIndex_category(String index_category) {
+        this.index_category = index_category;
     }
 
     public String getNo_of_product_images() {

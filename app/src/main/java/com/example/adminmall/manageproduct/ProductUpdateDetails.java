@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.adminmall.R;
@@ -34,6 +35,7 @@ public class ProductUpdateDetails extends AppCompatActivity {
         try {
 
             //initiliaze UI
+            final Spinner SpinnerCategorie = findViewById(R.id.spinnercategorie);
             final EditText product_title = findViewById(R.id.product_title);
             final EditText product_price = findViewById(R.id.product_price);
             final EditText star_1 = findViewById(R.id.star_1);
@@ -94,6 +96,33 @@ public class ProductUpdateDetails extends AppCompatActivity {
             // get product data from intent
             Intent i = getIntent();
             final Product product = (Product)i.getSerializableExtra("product");
+
+
+            //set selected categorie
+            String textcaterogie = product.getIndex_category();
+
+            if(textcaterogie.equals("4"))
+                SpinnerCategorie.setSelection(0);
+            if(textcaterogie.equals("7"))
+                SpinnerCategorie.setSelection(1);
+            if(textcaterogie.equals("3"))
+                SpinnerCategorie.setSelection(2);
+            if(textcaterogie.equals("6"))
+                SpinnerCategorie.setSelection(3);
+            if(textcaterogie.equals("5"))
+                SpinnerCategorie.setSelection(4);
+            if(textcaterogie.equals("2"))
+                SpinnerCategorie.setSelection(5);
+            if(textcaterogie.equals("11"))
+                SpinnerCategorie.setSelection(6);
+            if(textcaterogie.equals("8"))
+                SpinnerCategorie.setSelection(7);
+            if(textcaterogie.equals("9"))
+                SpinnerCategorie.setSelection(8);
+            if(textcaterogie.equals("10"))
+                SpinnerCategorie.setSelection(9);
+            if(textcaterogie.equals("12"))
+                SpinnerCategorie.setSelection(10);
 
             //fill edit texts with data of product
             product_title.setText(product.getProduct_title());
@@ -189,6 +218,36 @@ public class ProductUpdateDetails extends AppCompatActivity {
 
                         progressBar.setVisibility(View.VISIBLE);
                         Map<String, Object> updates = new HashMap<>();
+
+
+                        String textcaterogie = SpinnerCategorie.getSelectedItem().toString();
+                        int indexcategorie = 0;
+
+                        if(textcaterogie.equals("نقش على البلور"))
+                            indexcategorie = 4;
+                        if(textcaterogie.equals("خشب"))
+                            indexcategorie = 7;
+                        if(textcaterogie.equals("الخياطة"))
+                            indexcategorie = 3;
+                        if(textcaterogie.equals("صناعة المصوغ"))
+                            indexcategorie = 6;
+                        if(textcaterogie.equals("الأثاث"))
+                            indexcategorie = 5;
+                        if(textcaterogie.equals("اللباس التقليدي"))
+                            indexcategorie = 2;
+                        if(textcaterogie.equals("سعف النخيل"))
+                            indexcategorie = 11;
+                        if(textcaterogie.equals("نحاس"))
+                            indexcategorie = 8;
+                        if(textcaterogie.equals("الفخار و الخزف"))
+                            indexcategorie = 9;
+                        if(textcaterogie.equals("صناعة الجلد"))
+                            indexcategorie = 10;
+                        if(textcaterogie.equals("الزربية"))
+                            indexcategorie = 12;
+
+                        updates.put("use_tab_layout", true);
+                        updates.put("index_category", indexcategorie);
                         updates.put("product_title", product_title.getText().toString());
                         updates.put("product_description", product_description.getText().toString());
 
@@ -380,6 +439,10 @@ public class ProductUpdateDetails extends AppCompatActivity {
                                     @Override
                                     public void onSuccess(Void aVoid) {
                                         progressBar.setVisibility(View.GONE);
+                                        //return to activity list of product and close the current activity of adding product
+                                        Intent intent = new Intent(ProductUpdateDetails.this, ProductsListActivity.class);
+                                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                        startActivity(intent);
                                         Toast.makeText(ProductUpdateDetails.this, "Product successfully updated!", Toast.LENGTH_SHORT).show();
                                     }
                                 })

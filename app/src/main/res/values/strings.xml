@@ -1,5 +1,19 @@
 <resources>
     <string name="app_name">adminMall</string>
 
+    <string name="country_prompt">Choose a country</string>
 
+    <string-array name="categories_arrays">
+        <item>نقش على البلور</item>
+        <item>خشب</item>
+        <item>الخياطة</item>
+        <item>صناعة المصوغ</item>
+        <item>الأثاث</item>
+        <item>اللباس التقليدي</item>
+        <item>سعف النخيل</item>
+        <item>نحاس</item>
+        <item>الفخار و الخزف</item>
+        <item>صناعة الجلد</item>
+        <item>الزربية</item>
+    </string-array>
 </resources>

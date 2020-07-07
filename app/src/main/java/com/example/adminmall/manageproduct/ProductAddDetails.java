@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.adminmall.R;
@@ -34,6 +35,7 @@ public class ProductAddDetails extends AppCompatActivity {
         try {
 
             //initiliaze UI
+            final Spinner spinnercategorie = findViewById(R.id.spinnercategorie);
             final EditText product_title = findViewById(R.id.product_title);
             final EditText product_price = findViewById(R.id.product_price);
             final EditText star_1 = findViewById(R.id.star_1);
@@ -105,6 +107,36 @@ public class ProductAddDetails extends AppCompatActivity {
 
                         progressBar.setVisibility(View.VISIBLE);
                         Map<String, Object> data = new HashMap<>();
+
+                        //getselected categegorie
+                        String textcaterogie = spinnercategorie.getSelectedItem().toString();
+                        int indexcategorie = 0;
+
+                        if(textcaterogie.equals("نقش على البلور"))
+                            indexcategorie = 4;
+                        if(textcaterogie.equals("خشب"))
+                            indexcategorie = 7;
+                        if(textcaterogie.equals("الخياطة"))
+                            indexcategorie = 3;
+                        if(textcaterogie.equals("صناعة المصوغ"))
+                            indexcategorie = 6;
+                        if(textcaterogie.equals("الأثاث"))
+                            indexcategorie = 5;
+                        if(textcaterogie.equals("اللباس التقليدي"))
+                            indexcategorie = 2;
+                        if(textcaterogie.equals("سعف النخيل"))
+                            indexcategorie = 11;
+                        if(textcaterogie.equals("نحاس"))
+                            indexcategorie = 8;
+                        if(textcaterogie.equals("الفخار و الخزف"))
+                            indexcategorie = 9;
+                        if(textcaterogie.equals("صناعة الجلد"))
+                            indexcategorie = 10;
+                        if(textcaterogie.equals("الزربية"))
+                            indexcategorie = 12;
+
+                        data.put("use_tab_layout", true);
+                        data.put("index_category", indexcategorie);
                         data.put("product_title", product_title.getText().toString());
                         data.put("product_description", product_description.getText().toString());
 
